@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @task_organizer.status %>
+</p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @task_organizer.task.descricao %>
+</p>
+
+<p>
+  <strong>Organizer:</strong>
+  <%= @task_organizer.organizer.nome %>
+</p>
+
+<%= link_to 'Edit', edit_task_organizer_path(@task_organizer) %> |
+<%= link_to 'Back', task_organizers_path %>

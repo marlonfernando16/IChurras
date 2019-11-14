@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @organizer.nome %>
+</p>
+
+<p>
+  <strong>Matricula:</strong>
+  <%= @organizer.matricula %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @organizer.telefone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @organizer.email %>
+</p>
+
+<hr>
+<h1> Guests </h1>
+<h1>Task Organizers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @organizer.guests.each do |guest| %>
+      <tr>
+        <td><%= guest.nome %></td>
+        <td><%= guest.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Edit', edit_organizer_path(@organizer) %> |
+<%= link_to 'Back', organizers_path %>
